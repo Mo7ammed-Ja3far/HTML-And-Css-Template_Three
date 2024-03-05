@@ -55,6 +55,7 @@ ul {
   color: black;
 }
 .header .container {
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -69,21 +70,21 @@ ul {
   margin: 0;
   font-size: 30px;
 }
-.header .container .links ul {
+.header .container > div.nav > ul {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-.header .container .links li {
+.header .container > div.nav > ul > li {
   font-size: 16px;
-  position: relative;
+
   /* padding: 20px 0; */
   display: flex;
   align-items: center;
   height: 60px;
   overflow: hidden;
 }
-.header .container .links li::before {
+.header .container > div.nav > ul.nav > li > a::before {
   transition: var(--main-transition);
   display: block;
   width: 100%;
@@ -94,34 +95,60 @@ ul {
   top: 0;
   left: -100%;
 }
-.header .container .links li:hover::before {
+.header .container > div.nav ul.nav > li > a:hover::before {
   left: 0;
 }
-.header .container .links li a {
+.header .container > div.nav ul.nav > li > a {
   position: relative;
   height: 100%;
   text-transform: capitalize;
   padding: 0 30px;
   display: flex;
+  width: 100%;
   align-items: center;
+  justify-content: space-around;
 }
-.header .container .links .mega-menu {
+.header .container ul.nav > li:last-child:hover .mega-menu {
+  display: flex;
+}
+.header .container > div.nav .mega-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 3;
+  background-color: white;
+  width: 100%;
+  padding: 30px;
+}
+.header .mega-menu {
+  display: none;
+}
+.header .mega-menu .img {
 }
 @media (max-width: 767px) {
   .header .container .logo {
     flex-basis: 100%;
   }
-  .header .container .links li a {
+  .header .container > div.nav li a {
     padding: 0;
+    font-size: 16px;
   }
-  .header .container .links {
+  .header .container > div.nav {
     width: 100%;
   }
-  .header .container .links ul li {
+  .header .container > div.nav ul li {
     flex-basis: 23%;
   }
   .header .container {
     flex-direction: column;
+  }
+}
+@media (max-width: 991px) {
+  .header .container > div.nav .mega-menu {
+    display: none;
+  }
+  .header .container > div.nav .mega-menu .img {
+    display: none;
   }
 }
 /* end header */
