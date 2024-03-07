@@ -71,6 +71,7 @@ ul {
   margin: 0 auto 80px;
   position: relative;
   font-weight: bold;
+  cursor: pointer;
   padding: 10px 20px;
   border: 2px solid black;
 }
