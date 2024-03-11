@@ -585,6 +585,78 @@ ul {
   color: #777;
 }
 /* End testimonials */
+/* start test */
+.team {
+  padding: var(--main-padding) 0;
+}
+.team .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 40px;
+}
+.team .container .box::before {
+  content: "";
+  background-color: #f3f3f3;
+  width: calc(100% - 120px);
+  height: 100%;
+  position: absolute;
+  z-index: -1;
+  right: 0;
+  top: 0;
+  border-radius: 10px;
+}
+.team .container .box::after {
+  content: "";
+  background-color: #ddd;
+  width: calc(100% - 120px);
+  height: 100%;
+  position: absolute;
+  z-index: -1;
+  right: 0;
+  top: 0;
+  transform: translateX(100%);
+  transition: var(--main-transition);
+  border-radius: 10px;
+}
+.team .container .box:hover::after {
+  content: "";
+  transform: translateX(0%);
+}
+.team .container .box {
+  position: relative;
+  overflow: hidden;
+}
+.team .container .box .data {
+  padding-top: 45px;
+  display: flex;
+}
+
+.team .container .box .data .img img {
+  width: calc(100% - 75px);
+  float: right;
+  border-radius: 5px;
+}
+.team .container .box .data .icons {
+  display: flex;
+  flex-direction: column;
+}
+.team .container .box .data .icons i {
+  color: black;
+  padding: 10px;
+}
+.team .container .box .info {
+  margin-left: 135px;
+}
+.team .container .box .info h2 {
+  color: var(--main-color);
+  margin: 0;
+  font-size: 25px;
+}
+.team .container .box .info p {
+  color: #777;
+  margin: 14px;
+}
+/* End test */
 @keyframes flashing {
   100% {
     width: 200%;
