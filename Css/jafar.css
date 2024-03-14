@@ -644,6 +644,9 @@ ul {
   color: black;
   padding: 10px;
 }
+.team .container .box .data .icons i:hover {
+  color: var(--main-color);
+}
 .team .container .box .info {
   margin-left: 135px;
 }
