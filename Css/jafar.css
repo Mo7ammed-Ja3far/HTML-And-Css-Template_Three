@@ -660,6 +660,191 @@ ul {
   margin: 14px;
 }
 /* End test */
+/* start services */
+.services {
+  padding: var(--main-padding) 0;
+  background-color: #ddd;
+}
+.services .container {
+  display: grid;
+  gap: 40px;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  counter-reset: boxs;
+}
+.services .container .box::before {
+  content: "";
+  top: -3px;
+  height: 3px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  transition: var(--main-transition);
+  position: absolute;
+  background-color: var(--main-color);
+}
+.services .container .box:hover::before {
+  width: 100%;
+}
+.services .container .box {
+  position: relative;
+  transition: var(--main-transition);
+  background-color: white;
+  box-shadow: 0 12px 20px 0 rgb(0 0 0 / 13%), 0 2px 4px 0 rgb(0 0 0 / 12%);
+}
+.services .container .box:hover {
+  transform: translateY(-10px);
+}
+.services .container .box i {
+  text-align: center;
+  margin: 20px 0 0;
+  display: block;
+  color: #d5d5d5;
+}
+.services .container .box h2 {
+  margin: 20px 0 40px;
+  text-transform: capitalize;
+  text-align: center;
+  color: var(--main-color);
+}
+.services .container .box .details {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  position: relative;
+  background-color: #f9f9f9;
+}
+.services .container .box .details a {
+  color: var(--main-color);
+  text-decoration: none;
+}
+.services .container .box .details::before {
+  counter-increment: boxs;
+  content: "0" counter(boxs);
+  color: white;
+  background-color: var(--main-color);
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 80px;
+  font-size: 30px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  padding-right: 5px;
+  align-items: center;
+}
+.services .container .box .details::after {
+  content: "";
+  background-color: #d5d5d5;
+  position: absolute;
+  left: 85px;
+  top: 0;
+  height: 100%;
+  width: 50px;
+  transform: skewX(-30deg);
+  transform-origin: top left;
+}
+/* End services */
+/* start our skill */
+.our-skills {
+  padding: var(--main-padding) 0;
+}
+.our-skills .container {
+  display: flex;
+  align-items: center;
+}
+.our-skills .container > img {
+  width: 500px;
+}
+@media (max-width: 991px) {
+  .our-skills .container > img {
+    display: none;
+  }
+}
+.our-skills .container .info {
+  flex: 1;
+}
+.our-skills .container .info .placeholder {
+  height: 30px;
+  position: relative;
+  background-color: #eee;
+}
+.our-skills .container .info .skill h2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.our-skills .container .info .skill h2 > span {
+  font-size: 18px;
+  color: var(--main-color);
+  border-radius: 6px;
+  padding: 2px 3px;
+  border: 1px solid #eee;
+}
+.our-skills .container .info .placeholder span {
+  height: 30px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: var(--main-color);
+}
+
+/* End our skill */
+/* start work steps */
+.work-steps {
+  padding: var(--main-padding) 0;
+  background-color: #ddd;
+}
+.work-steps .container {
+  display: flex;
+  gap: 100px;
+}
+.work-steps .container .boxs {
+  flex: 1;
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+}
+.work-steps .container .boxs .box {
+  border: white 1px solid;
+  display: flex;
+  align-items: center;
+  background-color: #f6f6f6;
+  padding: 30px;
+  z-index: 1;
+  gap: 20px;
+  position: relative;
+  border-radius: 6px;
+}
+.work-steps .container .boxs .box::before {
+  top: 50%;
+  content: "";
+  position: absolute;
+  left: 50%;
+  width: 0;
+  height: 0;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  background-color: #ededed;
+  transition: var(--main-transition);
+}
+.work-steps .container .boxs .box:hover::before {
+  width: 100%;
+  height: 100%;
+}
+.work-steps .container .boxs .box img {
+  width: 60px;
+}
+.work-steps .container .box h2 {
+  margin: 0 0 20px 0;
+}
+.work-steps .container .box p {
+  line-height: 1.7;
+  color: #777;
+}
+/* End work steps */
 @keyframes flashing {
   100% {
     width: 200%;
