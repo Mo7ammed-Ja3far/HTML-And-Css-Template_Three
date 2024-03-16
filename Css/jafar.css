@@ -845,6 +845,37 @@ ul {
   color: #777;
 }
 /* End work steps */
+/* Start events */
+.events {
+  padding: var(--main-padding) 0;
+}
+
+.events .container {
+  flex-wrap: wrap;
+  display: flex;
+}
+.events .container .img {
+}
+.events .container .img img {
+  max-width: 450px;
+}
+.events .container .info {
+  flex: 1;
+  text-align: center;
+}
+.events .container .info .date {
+  display: flex;
+  flex-direction: row;
+}
+.events .container .info .date .time {
+}
+.events .container .info .date .time span {
+}
+.events .container .info h2 {
+}
+.events .container .info p {
+}
+/* End events */
 @keyframes flashing {
   100% {
     width: 200%;
