@@ -844,6 +844,22 @@ ul {
   line-height: 1.7;
   color: #777;
 }
+@media (max-width: 991px) {
+  .work-steps .container {
+    flex-direction: column;
+  }
+  .work-steps .container .box {
+    flex-direction: column;
+    text-align: center;
+  }
+  .work-steps .container .box .text h2,
+  .work-steps .container .box .text p {
+    margin: 0;
+  }
+  .work-steps .container .box .text h2 {
+    margin-bottom: 10px;
+  }
+}
 /* End work steps */
 /* Start events */
 .events {
