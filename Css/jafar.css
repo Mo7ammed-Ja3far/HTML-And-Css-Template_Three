@@ -923,7 +923,7 @@ ul {
   display: block;
 }
 @media (max-width: 991px) {
-  .container .img {
+  .events .container .img {
     display: none;
   }
 }
