@@ -966,6 +966,7 @@ ul {
   outline: none;
 }
 @media (max-width: 767px) {
+  .events .container .form form,
   .events .container .form form [type="email"],
   .events .container .form form [type="button"] {
     border-radius: 0;
@@ -973,11 +974,93 @@ ul {
   .events .container .form {
     max-width: 100%;
   }
+  .events .container .form form [type="button"] {
+    padding: 20px;
+  }
   .events .container .form form {
     flex-direction: column;
   }
+  .events .container .form form {
+    padding: 30px 15px;
+  }
 }
 /* End events */
+/* start pricing */
+.pricing {
+  background-color: #ddd;
+  padding: var(--main-padding) 0;
+}
+.pricing .container {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+.pricing .container .content {
+  background-color: white;
+  box-shadow: 0 12px 20px 0 rgb(0 0 0 / 13%), 0 2px 4px 0 rgb(0 0 0 / 12%);
+  padding: 20px 0;
+}
+.pricing .container .content img {
+  max-width: 70px;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.pricing .container .content h2,
+.pricing .container .content .buy {
+  text-align: center;
+}
+.pricing .container .content .buy span:first-of-type {
+  color: var(--main-color);
+  font-size: 50px;
+  font-weight: 800;
+  display: block;
+  margin-bottom: 10px;
+  margin-top: 20px;
+}
+.pricing .container .content .buy span:last-of-type {
+  display: block;
+  color: #777;
+}
+.pricing .container .content ul {
+  margin-top: 20px;
+}
+.pricing .container .content ul li::before {
+  font-family: "Font Awesome 5 Free";
+  content: "\f00c";
+  font-weight: 900;
+  color: var(--main-color);
+  margin-left: 10px;
+  margin-right: 5px;
+}
+.pricing .container .content ul li {
+  padding: 20px 0 20px 10px;
+  border-top: #eee solid 1px;
+}
+.pricing .container .content a {
+  background-color: white;
+  text-decoration: none;
+  text-align: center;
+  border: var(--main-color) 2px solid;
+  padding: 10px;
+  margin: 20px auto;
+  font-weight: bold;
+  width: fit-content;
+  color: var(--main-color);
+  display: block;
+  transition: var(--main-transition);
+}
+.pricing .container .content a:hover {
+  background-color: var(--main-color);
+  color: white;
+}
+@media (min-width: 991px) {
+  .pricing .container .advanced {
+    position: relative;
+    top: -20px;
+  }
+}
+/* end pricing */
 @keyframes flashing {
   100% {
     width: 200%;
