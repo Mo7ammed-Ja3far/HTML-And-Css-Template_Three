@@ -792,61 +792,7 @@ ul {
 }
 
 /* End our skill */
-/* start work steps */
-.work-steps {
-  padding: var(--main-padding) 0;
-  background-color: #ddd;
-}
-.work-steps .container {
-  display: flex;
-  gap: 100px;
-}
-.work-steps .container img {
-  max-width: 100%;
-}
-.work-steps .container .boxs {
-  flex: 1;
-  display: flex;
-  gap: 10px;
-  flex-direction: column;
-}
-.work-steps .container .boxs .box {
-  border: white 1px solid;
-  display: flex;
-  align-items: center;
-  background-color: #f6f6f6;
-  padding: 30px;
-  z-index: 1;
-  gap: 20px;
-  position: relative;
-  border-radius: 6px;
-}
-.work-steps .container .boxs .box::before {
-  top: 50%;
-  content: "";
-  position: absolute;
-  left: 50%;
-  width: 0;
-  height: 0;
-  transform: translate(-50%, -50%);
-  z-index: -1;
-  background-color: #ededed;
-  transition: var(--main-transition);
-}
-.work-steps .container .boxs .box:hover::before {
-  width: 100%;
-  height: 100%;
-}
-.work-steps .container .boxs .box img {
-  width: 60px;
-}
-.work-steps .container .box h2 {
-  margin: 0 0 20px 0;
-}
-.work-steps .container .box p {
-  line-height: 1.7;
-  color: #777;
-}
+
 @media (max-width: 991px) {
   .work-steps .container {
     flex-direction: column;
@@ -1177,6 +1123,102 @@ ul {
   font-style: italic;
   font-weight: bold;
 } /* end awesome   */
+/* start work steps */
+.work-steps {
+  padding: var(--main-padding) 0;
+  background-color: #ddd;
+}
+.work-steps .container {
+  display: flex;
+  gap: 100px;
+}
+.work-steps .container img {
+  max-width: 100%;
+}
+.work-steps .container .boxs {
+  flex: 1;
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+}
+.work-steps .container .boxs .box {
+  border: white 1px solid;
+  display: flex;
+  align-items: center;
+  background-color: #f6f6f6;
+  padding: 30px;
+  z-index: 1;
+  gap: 20px;
+  position: relative;
+  border-radius: 6px;
+}
+.work-steps .container .boxs .box::before {
+  top: 50%;
+  content: "";
+  position: absolute;
+  left: 50%;
+  width: 0;
+  height: 0;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  background-color: #ededed;
+  transition: var(--main-transition);
+}
+.work-steps .container .boxs .box:hover::before {
+  width: 100%;
+  height: 100%;
+}
+.work-steps .container .boxs .box img {
+  width: 60px;
+}
+.work-steps .container .box h2 {
+  margin: 0 0 20px 0;
+}
+.work-steps .container .box p {
+  line-height: 1.7;
+  color: #777;
+}
+/* start discound */
+.discound {
+  display: flex;
+  padding: var(--main-padding) 0;
+  text-align: center;
+  
+}
+.discound .img {
+
+  flex-basis: 50%;
+}
+.discound .form {
+  flex-basis: 50%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+.discound .form h2 {
+  flex-basis: 100%;
+
+}
+.discound .form [type="text"] 
+, textarea{
+  border: none;
+  border-bottom:2px solid  #ccc ;
+  margin-bottom: 20px;
+  padding: 15PX;
+  background: #F9F9F9;
+}
+.discound .form [type="text"]:focus-visible
+, textarea:focus-visible{
+  outline: none;
+}
+.discound .form textarea {
+  height: 200px;
+}
+.discound .form input {
+  display: block;
+}
+/* end discound */
 
 @keyframes flashing {
   100% {
